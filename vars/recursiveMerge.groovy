@@ -98,6 +98,7 @@ def call(Map pipelineParams) {
             export GIT_USER=${gitUser}
         fi
         export STATUS=${status} MERGE_OPTIONS="${mergeOptions}"
+        export NO_ZIP_FILE=true
         bash build/${buildInfraPath}/recursive-merge
     """
 
